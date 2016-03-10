@@ -1,4 +1,4 @@
-package backtracking;
+package _78_Subsets;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +26,7 @@ public class Subsets {
     	solution.add(new ArrayList<Integer>(list));
     	
     	for(int i = pos; i < nums.length; i++){
+    		
     		list.add(nums[i]);
     		
     		BackTracking(solution, list, nums, i+1);
