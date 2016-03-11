@@ -34,7 +34,7 @@ public class MergeList {
             temp = temp.next;
         }
                
-        return result;
+        return result.next;
     }
 }
 
