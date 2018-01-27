@@ -24,3 +24,4 @@ class Solution:
                     result += hashmap[s[i]]
 
         return result
+    
