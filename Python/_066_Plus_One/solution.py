@@ -4,7 +4,7 @@ class Solution:
         :type digits: List[int]
         :rtype: List[int]
         """
-        for i in range(0, len(digits))[::-1]:
+        for i in range(len(digits), -1):
             if digits[i] == 9: 
                 digits[i] = 0
             else:
