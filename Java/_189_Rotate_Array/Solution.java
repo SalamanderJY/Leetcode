@@ -1,5 +1,3 @@
-package _189_Rotate_Array;
-
 public class Solution {
 	public void rotate(int[] nums, int k) {
 	    k = k % nums.length;
