@@ -1,12 +1,10 @@
-package _191_Number_of_1_Bits;
 public class Solution {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
         int result = 0;
-        while(n != 0) {
-            n &= n-1;
-            result++;
-        }
+        for (int i = 0; i < 32; i++, n >>= 1)
+            if ((n & 1) > 0)
+                result++;
         return result;
     }
 }
