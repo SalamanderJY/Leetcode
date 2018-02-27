@@ -1,10 +1,6 @@
-package _205_Isomorphic_Strings;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class Solution {
-	public boolean isIsomorphic(String s, String t) {
+    public boolean isIsomorphic(String s, String t) {
+		
 		char[] strs = s.toCharArray();
 		char[] strt = t.toCharArray();
 		
@@ -33,6 +29,6 @@ public class Solution {
     			}
     		}
     	}  	
-    	return flag;        
+    	return flag;   
     }
 }
