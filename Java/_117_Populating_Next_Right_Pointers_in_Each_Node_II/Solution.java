@@ -1,36 +1,30 @@
-package _117_Populating_Next_Right_Pointers_in_Each_Node_II;
-
-
-class TreeLinkNode {
-    int val;
-    TreeLinkNode left, right, next;
-    TreeLinkNode(int x) { val = x; }
-}
-
- 
-//You may only use constant extra space
+/**
+ * Definition for binary tree with next pointer.
+ * public class TreeLinkNode {
+ *     int val;
+ *     TreeLinkNode left, right, next;
+ *     TreeLinkNode(int x) { val = x; }
+ * }
+ */
 public class Solution {
     public void connect(TreeLinkNode root) {
-        TreeLinkNode head = root;
-        
-        while(head != null) {
-            TreeLinkNode curNode = head;
-            TreeLinkNode tmpNextHead = new TreeLinkNode(0);
-            TreeLinkNode pre = tmpNextHead;
-
-            while(curNode != null) {
-                if(curNode.left != null) {
-                    pre.next = curNode.left;
-                    pre = pre.next;
+        TreeLinkNode tmpRoot = root;    
+        while (tmpRoot != null) {
+            TreeLinkNode cur = tmpRoot;
+            TreeLinkNode dummy = new TreeLinkNode(0);
+            TreeLinkNode tmp = dummy;
+            while (cur != null) {
+                if (cur.left != null) {
+                    tmp.next = cur.left;
+                    tmp = tmp.next;
                 }
-                if(curNode.right != null) {
-                    pre.next = curNode.right;
-                    pre = pre.next;
+                if (cur.right != null) {
+                    tmp.next = cur.right;
+                    tmp = tmp.next;
                 }
-                curNode = curNode.next;
-            }
-            
-            head = tmpNextHead.next;
+                cur = cur.next;
+            }          
+            tmpRoot = dummy.next;
         }
     }
 }
