@@ -12,7 +12,7 @@ public:
 
 	for (int i = 0; i < nums.size(); i++) {
 	    int numToFind = target - nums[i];
-            if (hash.find(numToFind) != hash.end()) {
+	    if (hash.find(numToFind) != hash.end()) {
 		result.push_back(hash[numToFind]);
 		result.push_back(i);
 		return result;
