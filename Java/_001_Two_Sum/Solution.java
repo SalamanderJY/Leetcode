@@ -14,8 +14,8 @@ public class Solution {
                 map.put(nums[i], i);
             // find (target - numbers[i])
             a = map.get(target - nums[i]);
-            if (a != null && a < i) {
-            	result = new int[]{a, i};
+            if (a != null && a < i) 
+		result = new int[]{a, i};
                 break;
             }
 	}	
