@@ -4,6 +4,15 @@ class Solution:
         :type s: str
         :rtype: int
         """
+        '''
+        A Substring without repeating characters,
+        Using two pointers,(start and i, i is current traversed char),
+        No repeating char between two pointers,
+        So, the max length between two pointers is the answer.
+        When find the repeating char,
+        the start pointer will move to the position + 1 of appeared char where found last time,
+        continued traversed until i == len(s).
+        '''
         mapping = [-1] * 256
         maximum = 0
         start = -1
