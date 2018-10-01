@@ -17,9 +17,9 @@ public:
 	        }
 	    }
         }
-	for (int i = start; i < start + max; i++)
-            res += s[i];
-	return res;
+	 for (int i = start; i < start + max; i++)
+             res += s[i];
+	 return res;
         // return s.substr(start, start + max); fuck wrong answer
     }
 };
