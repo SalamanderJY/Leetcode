@@ -8,14 +8,14 @@ class Solution {
         int index = 0;
         int flag = 1;      
         while (array[index] == ' ')
-        	index++; 
+            index++; 
         if (array[index] == '-') {
-        	flag = -1;
-        	index++;
+            flag = -1;
+            index++;
         }       
         else if (array[index] == '+') {
-        	flag = 1;
-        	index++;
+            flag = 1;
+            index++;
         }       
         for (int i = index; i < n; i++) {
             if (array[i] < '0' || array[i] > '9')
@@ -24,6 +24,6 @@ class Solution {
                 return flag == -1 ? Integer.MIN_VALUE : Integer.MAX_VALUE;
             result = result * 10 + (array[i] - '0');
         }     
-	return result * flag;
+	 return result * flag;
     }
 }
