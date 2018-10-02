@@ -23,6 +23,6 @@ public:
                 return flag == -1 ? INT_MIN : INT_MAX;
             result = result * 10 + (str[i] - '0');
         }     
-	return result * flag;
+	 return result * flag;
     }
 };
