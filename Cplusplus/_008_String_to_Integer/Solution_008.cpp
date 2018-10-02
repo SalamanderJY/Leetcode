@@ -16,7 +16,7 @@ public:
         	flag = 1;
         	index++;
         }       
-        for(int i = index; i < str.size(); i++) {
+        for (int i = index; i < str.size(); i++) {
             if (str[i] < '0' || str[i] > '9')
                 break;
             if (result > INT_MAX / 10 || (result == INT_MAX / 10 && (str[i] - '0') > INT_MAX % 10))
