@@ -7,7 +7,7 @@ public class Roman {
     public int romanToInt(String s) {
     	int result = 0;
     	char[] str = s.toCharArray();
-        if(s.length() <= 0) {
+        if (s.length() <= 0) {
            return result;
         }
         
@@ -20,7 +20,7 @@ public class Roman {
         number.put('D', 500);
         number.put('M', 1000);
         
-        for(int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
         	if(i == 0)
         		result += number.get(str[i]);
         	if(i > 0) {
@@ -32,8 +32,7 @@ public class Roman {
         			result += number.get(str[i]);
         		}
         	}
-        }
-      
+        }   
         return result;
     }
 }
