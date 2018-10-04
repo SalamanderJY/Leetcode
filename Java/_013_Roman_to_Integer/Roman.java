@@ -21,15 +21,15 @@ public class Roman {
         number.put('M', 1000);
         
         for (int i = 0; i < s.length(); i++) {
-        	if(i == 0)
-        		result += number.get(str[i]);
-        	if(i > 0) {
-        		if(number.get(str[i]) <= number.get(str[i-1])) {
-        			result += number.get(str[i]);
+            if(i == 0)
+        	    result += number.get(str[i]);
+        	if (i > 0) {
+        	    if (number.get(str[i]) <= number.get(str[i - 1])) {
+        		    result += number.get(str[i]);
         		}
-        		else {
-        			result = result - 2*number.get(str[i-1]);
-        			result += number.get(str[i]);
+        	    else {
+        		    result = result - 2 * number.get(str[i - 1]);
+        		    result += number.get(str[i]);
         		}
         	}
         }   
