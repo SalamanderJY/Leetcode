@@ -22,5 +22,4 @@ class Solution:
                 else:
                     result -= 2 * hashmap[s[i - 1]]
                     result += hashmap[s[i]]
-
         return result
