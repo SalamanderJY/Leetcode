@@ -27,11 +27,11 @@ public class Roman {
                 if (number.get(str[i]) <= number.get(str[i - 1])) {
                     result += number.get(str[i]);
                 }
-        	    else {
-        		    result = result - 2 * number.get(str[i - 1]);
-        		    result += number.get(str[i]);
-        		}
-        	}
+                else {
+                    result = result - 2 * number.get(str[i - 1]);
+                    result += number.get(str[i]);
+                }
+            }
         }   
         return result;
     }
