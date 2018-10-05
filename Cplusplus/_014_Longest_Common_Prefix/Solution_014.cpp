@@ -11,7 +11,7 @@ public:
 	    for (string s : strs) {
 		if (s.size() == min || s.at(min) != strs[0].at(min))
 		    return strs[0].substr(0, min);
-		}
+	    }
 	    min++;
 	}
 	return "";
