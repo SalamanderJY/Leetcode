@@ -18,10 +18,8 @@ class Solution:
                 stack.pop()
         return stack.isEmpty()
 
-
+    
 class Stack:
-    """模拟栈"""
-
     def __init__(self):
         self.items = []
 
