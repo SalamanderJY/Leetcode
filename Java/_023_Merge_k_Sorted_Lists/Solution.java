@@ -21,7 +21,7 @@ public class Solution {
         for (ListNode listNode : lists) {
 	    if(listNode != null)
 		heap.add(listNode);
-	}   
+	 }   
         while (!heap.isEmpty()) {
             ListNode cur = heap.poll();
             temp.next = cur;
