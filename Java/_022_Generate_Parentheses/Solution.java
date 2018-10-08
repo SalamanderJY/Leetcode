@@ -6,8 +6,7 @@ class Solution {
     }
     
     public void addParentheses(List<String> result, String str, int notAdd, int notMatch) {
-        if (notMatch == 0 && notAdd == 0)
-        {
+        if (notMatch == 0 && notAdd == 0) {
             result.add(str);
             return;
         }
