@@ -6,10 +6,8 @@ public:
         return result;
     }
     
-    void addParentheses(vector<string> &result, string str, int notAdd, int notMatch)
-    {
-        if (notMatch == 0 && notAdd == 0)
-        {
+    void addParentheses(vector<string> &result, string str, int notAdd, int notMatch) {
+        if (notMatch == 0 && notAdd == 0) {
             result.push_back(str);
             return;
         }
