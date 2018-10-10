@@ -5,11 +5,9 @@ public:
         long res = 0;
         long m = abs((long)dividend);
         long n = abs((long)divisor);
-        while (m >= n)
-        {
+        while (m >= n) {
             long temp = n, i = 1;
-            while (temp << 1 < m)
-            {
+            while (temp << 1 < m) {
                 temp <<= 1;
                 i <<= 1;
             }
