@@ -3,9 +3,9 @@ public:
     int strStr(string haystack, string needle) {
         if (needle.size() == 0)
 	    return 0;
-        int i = 0, j = 0;
-	vector<int> next = findNext(needle);
-	while (i < haystack.size() && j != needle.size()) {
+         int i = 0, j = 0;
+	 vector<int> next = findNext(needle);
+	 while (i < haystack.size() && j != needle.size()) {
 	    if (j == -1 || haystack.at(i) == needle.at(j)) {
 		i++;
 		j++;
