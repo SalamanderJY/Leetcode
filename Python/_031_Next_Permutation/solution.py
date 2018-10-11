@@ -17,4 +17,4 @@ class Solution:
             if nums[j] > nums[consider]:
                 nums[j], nums[consider] = nums[consider], nums[j]
                 break
-
+        return
