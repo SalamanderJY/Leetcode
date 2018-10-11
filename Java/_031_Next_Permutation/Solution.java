@@ -10,7 +10,8 @@ class Solution {
             nums[j] = nums[nums.length + i - j];
             nums[nums.length + i - j] = temp;
         }
-        if (i == -1) return;
+        if (i == -1) 
+            return ;
         for (int j = i + 1; j < nums.length; j++)
             if (nums[j] > nums[i]) {
                 int temp = nums[j];
@@ -18,5 +19,6 @@ class Solution {
                 nums[i] = temp;
                 break;
             }
+        return ;
     }
 }
