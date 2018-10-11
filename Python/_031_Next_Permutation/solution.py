@@ -11,7 +11,8 @@ class Solution:
             consider -= 1
         for j in range(consider + 1, (len(nums) + consider + 1) // 2):
             nums[j], nums[len(nums) + consider - j] = nums[len(nums) + consider - j], nums[j]
-        if consider == -1: return
+        if consider == -1: 
+            return
         for j in range(consider + 1, len(nums)):
             if nums[j] > nums[consider]:
                 nums[j], nums[consider] = nums[consider], nums[j]
