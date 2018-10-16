@@ -4,6 +4,7 @@ class Solution:
         :type board: List[List[str]]
         :rtype: bool
         """
+        # check row and col
         for i in range(len(board)):
             row = [False] * 10
             col = [False] * 10
@@ -16,7 +17,7 @@ class Solution:
                     if (col[ord(board[j][i]) - ord('0')]):
                         return False
                     col[ord(board[j][i]) - ord('0')] = True
-        
+        # check 3 x 3 block
         for i in range(3):
             for j in range(3):
                 num = [False] * 10
