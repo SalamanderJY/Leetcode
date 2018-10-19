@@ -28,7 +28,3 @@ class Solution:
                 flag = True
                 string += str(res[len(res) - 1 - i])
         return string
-
-if __name__ == '__main__':
-    solution = Solution()
-    print(solution.multiply("123", "456"))
