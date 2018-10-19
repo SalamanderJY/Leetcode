@@ -14,7 +14,7 @@ public:
                 int mul = res[idx] + (num1.at(i) - '0') * (num2.at(j) - '0') + carry;
                 carry = mul / 10;
                 res[idx] = mul % 10;
-                
+                idx--;
             }
             res[idx] += carry;
         }
