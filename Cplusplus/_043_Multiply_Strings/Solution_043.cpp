@@ -18,7 +18,6 @@ public:
             }
             res[idx] += carry;
         }
-
         string str = "";
         for (int i = 0; i < length; ++i) {
             if (i == 0 && res[i] == 0) continue;
