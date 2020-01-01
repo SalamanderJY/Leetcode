@@ -4,8 +4,7 @@ class Solution {
         Arrays.fill(map, -1);
         int maximum = 0;
         int start = -1;
-        for (int i = 0; i < s.length(); i++)
-        {
+        for (int i = 0; i < s.length(); i++) {
             if (map[s.charAt(i)] > start)
                 start = map[s.charAt(i)];
             map[s.charAt(i)] = i;
