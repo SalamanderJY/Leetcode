@@ -7,8 +7,8 @@ class Solution:
         if len(s) == 0:
             return s
         dp = [[False for i in range(len(s))] for j in range(len(s))]
-        start, end = 0, 0
-        maximum = 0;
+        start = 0
+        maximum = 0
         for i in range(len(s)):
             for j in range(0, i + 1):
                 if s[i] == s[j] and (i - j <= 2 or dp[j + 1][i - 1]):
