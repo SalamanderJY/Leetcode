@@ -8,13 +8,11 @@ public:
         int j = 0;
         int back = numRows - 2;
         while (i < s.size()) {
-            for (j = 0; j < s.size() && j < numRows && i < s.size(); j++) {
+            for (j = 0; j < s.size() && j < numRows && i < s.size(); j++, i++) {
                 result[j] += s[i];
-                i++;
             }
-            for (j = back; j < s.size() && j > 0 && i < s.size(); j--) {
+            for (j = back; j < s.size() && j > 0 && i < s.size(); j--, i++) {
                 result[j] += s[i];
-                i++;
             }
         }
         for (i = 0; i < numRows - 1; i++)

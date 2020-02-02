@@ -9,13 +9,11 @@ class Solution {
         int j = 0;
         int back = numRows - 2;
         while (i < s.length()) {
-            for (j = 0; j < s.length() && j < numRows && i < s.length(); j++) {
+            for (j = 0; j < s.length() && j < numRows && i < s.length(); j++, i++) {
                 result[j] += source[i];
-                i++;
             }
-            for (j = back; j < s.length() && j > 0 && i < s.length(); j--) {
+            for (j = back; j < s.length() && j > 0 && i < s.length(); j--, i++) {
                 result[j] += source[i];
-                i++;
             }
         }
         for (i = 0; i < numRows - 1; i++)
