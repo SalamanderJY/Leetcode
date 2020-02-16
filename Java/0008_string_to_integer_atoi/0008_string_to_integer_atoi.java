@@ -24,6 +24,6 @@ class Solution {
                 return flag == -1 ? Integer.MIN_VALUE : Integer.MAX_VALUE;
             result = result * 10 + (array[i] - '0');
         }     
-	 return result * flag;
+        return result * flag;
     }
 }
