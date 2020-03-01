@@ -8,7 +8,6 @@ public:
             res = res * 10 + x % 10;
             x = x / 10;
         }
-        // 返回偶数回文或奇数回文
         return (x == res || x == res / 10);
     }
 };
