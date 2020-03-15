@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class Roman {
     public int romanToInt(String s) {
-    	int result = 0;
-    	char[] str = s.toCharArray();
+        int result = 0;
+        char[] str = s.toCharArray();
         if (s.length() <= 0) {
            return result;
         }
