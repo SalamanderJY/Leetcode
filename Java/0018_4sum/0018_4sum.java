@@ -9,7 +9,6 @@ class Solution {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i++)
             map.put(nums[i], i);
-        
         for (int i = 0; i < nums.length - 3; i++) {
             if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) 
                 return res;
