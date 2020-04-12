@@ -12,7 +12,6 @@ class Solution:
         mapping = {}
         for i in range(0, len(nums)):
             mapping[nums[i]] = i
-        
         for i in range(0, len(nums) - 3):
             if nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target: 
                 return res

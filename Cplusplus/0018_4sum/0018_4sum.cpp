@@ -10,7 +10,6 @@ public:
         unordered_map<int, int> map;
         for (int i = 0; i < nums.size(); i++)
             map[nums[i]] = i;
-        
         for (int i = 0; i < nums.size() - 3; i++) {
             if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) 
                 return res;
