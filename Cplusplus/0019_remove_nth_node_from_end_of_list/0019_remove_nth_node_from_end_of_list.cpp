@@ -24,7 +24,7 @@ public:
             first = first->next;
             second = second->next;
         }  
-        first->next = first->next->next;  
-        return tempHead->next;       
+        first->next = first->next->next;
+        return tempHead->next;
     }
 };
