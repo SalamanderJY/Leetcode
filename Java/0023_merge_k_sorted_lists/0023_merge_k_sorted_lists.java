@@ -12,16 +12,15 @@ public class Solution {
         Queue<ListNode> heap = new PriorityQueue<ListNode>(new Comparator<ListNode>() {
             @Override
             public int compare(ListNode o1, ListNode o2) {
-	        // TODO Auto-generated method stub
-	        return o1.val - o2.val;
-            }	
+                return o1.val - o2.val;
+            }   
         });
         ListNode result = new ListNode(0);
         ListNode temp = result;
         for (ListNode listNode : lists) {
-	    if(listNode != null)
-		heap.add(listNode);
-	 }   
+            if (listNode != null)
+                heap.add(listNode);
+        }   
         while (!heap.isEmpty()) {
             ListNode cur = heap.poll();
             temp.next = cur;
