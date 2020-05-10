@@ -14,9 +14,10 @@ class Solution:
         dummy.next = head
         pre = dummy
         while pre.next != None and pre.next.next != None:
-            temp = pre.next.next
-            pre.next.next = temp.next
-            temp.next = pre.next
-            pre.next = temp
-            pre = temp.next      
+            ListNode temp1 = pre.next
+            ListNode temp2 = pre.next.next
+            pre.next = temp2
+            temp1.next = temp2.next
+            temp2.next = temp1
+            pre = pre.next.next   
         return dummy.next
