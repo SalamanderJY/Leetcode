@@ -7,25 +7,25 @@ class Solution:
         """
         if len(words) == 0:
             return []
-        word_count = {}
-        word_count_temp = {}
+        wordCnt = {}
+        wordCntTmp = {}
         res = []
         for i in range(len(words)):
-            if words[i] in word_count:
-                word_count[words[i]] += 1
+            if words[i] in wordCnt:
+                wordCnt[words[i]] += 1
             else:
-                word_count[words[i]] = 1
+                wordCnt[words[i]] = 1
         for i in range(0, len(s) - len(words[0]) * len(words) + 1):
             j = 0
-            word_count_temp.clear()
+            wordCntTmp.clear()
             while j < len(words):
                 word = s[i + j * len(words[0]) : i + j * len(words[0]) + len(words[0])]
-                if word in word_count:
-                    if word in word_count_temp:
-                        word_count_temp[word] += 1
+                if word in wordCnt:
+                    if word in wordCntTmp:
+                        wordCntTmp[word] += 1
                     else:
-                        word_count_temp[word] = 1
-                    if word_count_temp[word] > word_count[word]:
+                        wordCntTmp[word] = 1
+                    if wordCntTmp[word] > wordCnt[word]:
                         break
                 else:
                     break
@@ -33,4 +33,3 @@ class Solution:
             if j == len(words):
                 res.append(i)
         return res
-
