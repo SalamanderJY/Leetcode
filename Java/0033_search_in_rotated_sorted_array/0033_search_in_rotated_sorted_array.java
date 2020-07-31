@@ -15,12 +15,14 @@ class Solution {
             if (nums[mid] < target) {
                 if ((target < nums[right]) || (target > nums[right] && nums[mid] > nums[right]))
                     left = mid;
-                else right = mid;
+                else 
+                    right = mid;
             }
             else if (nums[mid] > target) {
                 if ((target > nums[left]) || (target < nums[left] && nums[mid] < nums[left]))
                     right = mid;
-                else left = mid;
+                else 
+                    left = mid;
             }
         }
         if (nums[left] == target) 
