@@ -1,12 +1,12 @@
 ﻿int cmp(const void* a,const void* b)
 {
-    return *(int*)a - *(int*)b;
+    return *(int *)a - *(int *)b;
 }
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     // need to be set to 2
     *returnSize = 2;
-    int *res = (int*)malloc(sizeof(int) * 2);
+    int *res = (int *)malloc(sizeof(int) * 2);
     // sort the array
     int temp[numsSize];
     memcpy(temp, nums, sizeof(temp));
