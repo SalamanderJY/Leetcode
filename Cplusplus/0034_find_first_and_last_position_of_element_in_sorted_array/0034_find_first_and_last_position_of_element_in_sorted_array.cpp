@@ -8,9 +8,9 @@ public:
             if (nums[mid] == target) {
                 left = right = mid;
                 while (left >= 0 && nums[left] == nums[mid])
-                    left -= 1;
+                    left--;
                 while (right <= nums.size() - 1 && nums[right] == nums[mid])
-                    right += 1;
+                    right++;
                 vector<int> found{left + 1, right - 1};
                 return found;
             }
