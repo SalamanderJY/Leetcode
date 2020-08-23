@@ -15,11 +15,11 @@ def countRecurrent(string):
         result = ""
         count = 1
         for i in range(1, len(string)):
-            if string[i] == string[i-1]:
+            if string[i] == string[i - 1]:
                 count += 1
             else:
                 result += str(count)
-                result += string[i-1]
+                result += string[i - 1]
                 count = 1
         result += str(count)
         result += string[len(string) - 1]
