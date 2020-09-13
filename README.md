@@ -1,2 +1,5 @@
 # LeetCode
-LeetCode Reports with pure C, C++, Java and Python3
+
+**LeetCode Reports implement by pure C, C++, Java and Python3**
+
+**Enjoy it**

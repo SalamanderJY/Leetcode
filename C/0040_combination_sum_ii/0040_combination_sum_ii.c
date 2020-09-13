@@ -31,7 +31,7 @@ void dfs(int* candidates,
         if (target - candidates[i] < 0) {
             break;
         }
-        /* avoid the num picked repeadedly */
+        /* avoid the num picked repeatedly */
         if (i > index && candidates[i - 1] == candidates[i]) {
             continue;
         }
