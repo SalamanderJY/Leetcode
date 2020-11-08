@@ -1,15 +1,16 @@
 class Solution {
 private:
+int g_solutionsNum = 0;
 
-void backtracking(int n, int row, vector<string>& chessboard, vector<vector<string>>& result) {
+void backtracking(int n, int row, vector<string>& chessboard) {
     if (row == n) {
-        result.push_back(chessboard);
+        g_solutionsNum++;
         return;
     }
     for (int col = 0; col < n; col++) {
         if (isValid(row, col, chessboard, n)) {
             chessboard[row][col] = 'Q';
-            backtracking(n, row + 1, chessboard, result);
+            backtracking(n, row + 1, chessboard);
             chessboard[row][col] = '.';
         }
     }
@@ -39,10 +40,9 @@ bool isValid(int row, int col, vector<string>& chessboard, int n) {
 }
 
 public:
-    vector<vector<string>> solveNQueens(int n) {
+    int totalNQueens(int n) {
         std::vector<std::string> chessboard(n, std::string(n, '.'));
-        vector<vector<string>> result;
-        backtracking(n, 0, chessboard, result);
-        return result;
+        backtracking(n, 0, chessboard);
+        return g_solutionsNum;
     }
 };
