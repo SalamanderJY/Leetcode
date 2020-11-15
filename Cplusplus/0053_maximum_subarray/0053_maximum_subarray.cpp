@@ -10,6 +10,7 @@ public:
             dp[i] = dp[i-1] > 0 ? dp[i-1] + nums[i] : nums[i];
             maximum = max(maximum, dp[i]);
         }
+        delete[] dp;
         
         return maximum;
     }
