@@ -5,11 +5,9 @@ class Solution {
         
         if (s.length() <= 0)
             return 0;      
-        else 
-        {
+        else {
             int k, i;
-            for (k = 1; k < s.length() + 1; k++) 
-            {
+            for (k = 1; k < s.length() + 1; k++) {
                 if (s.charAt(s.length() - k) == ' ')
                     start -= 1;
                 else
@@ -19,14 +17,12 @@ class Solution {
             if (start == -1)
                 return 0;
             
-            for (i = k; i < s.length() + 1; i++) 
-            {
+            for (i = k; i < s.length() + 1; i++) {
                 if (s.charAt(s.length() - i) != ' ')
                     count += 1;
                 else
                     break;
             }
-
             return count;
         }
     }

@@ -6,11 +6,9 @@ public:
         
         if (s.size() <= 0)
             return 0;      
-        else 
-        {
+        else {
             int k, i;
-            for (k = 1; k < s.size() + 1; k++) 
-            {
+            for (k = 1; k < s.size() + 1; k++) {
                 if (s[s.size() - k] == ' ')
                     start -= 1;
                 else
@@ -20,14 +18,12 @@ public:
             if (start == -1)
                 return 0;
             
-            for (i = k; i < s.size() + 1; i++) 
-            {
+            for (i = k; i < s.size() + 1; i++) {
                 if (s[s.size() - i] != ' ')
                     count += 1;
                 else
                     break;
             }
-
             return count;
         }
     }
