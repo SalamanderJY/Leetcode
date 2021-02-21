@@ -17,14 +17,12 @@ public:
         if (k == 0 || k == length || length == 0)
             return head;     
         ListNode *fast = head; 
-        while (k > 1)
-        {
+        while (k > 1) {
             fast = fast->next;
             k--;
         }
         ListNode *slow = head, *prevslow = NULL;
-        while (fast->next != NULL)
-        {
+        while (fast->next != NULL) {
             fast = fast->next;
             prevslow = slow;
             slow = slow->next;
