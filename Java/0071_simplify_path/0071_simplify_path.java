@@ -3,16 +3,17 @@ class Solution {
         String[] pathArray = path.split("/");  
         int length = pathArray.length;  
         Stack<String> stack = new Stack<String>();  
-        String result="";  
+        String result = "";  
         for (int i = 0; i < length; i++) {  
-            if (pathArray[i].equals("") || pathArray[i].equals("."))  
+            if (pathArray[i].equals("") || pathArray[i].equals(".")) {
                 continue;
-            else if (pathArray[i].equals("..")) {  
-                if(!stack.isEmpty())    
-                    stack.pop();           
+            } else if (pathArray[i].equals("..")) {  
+                if (!stack.isEmpty()) {    
+                    stack.pop();
+                }           
+            } else {  
+                stack.push(pathArray[i]);
             }  
-            else   
-                stack.push(pathArray[i]);  
         }  
         if (stack.isEmpty())  
             return "/";  
