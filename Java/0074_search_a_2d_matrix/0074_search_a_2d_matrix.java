@@ -1,11 +1,10 @@
 class Solution {
-public:
-    bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        if(matrix.size() == 0 || matrix[0].size() == 0)
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if (matrix.length == 0 || matrix[0].length == 0)
             return false;
-        int i = matrix.size() - 1;
+        int i = matrix.length - 1;
         int j = 0;
-        while (i >= 0 && j <= matrix[0].size() - 1) {
+        while (i >= 0 && j <= matrix[0].length - 1) {
             if (target > matrix[i][j])
                 ++j;
             else if (target < matrix[i][j])
@@ -15,4 +14,4 @@ public:
         }
         return false;
     }
-};
+}
