@@ -1,21 +1,17 @@
-int search(int* nums, int numsSize, int target){
+bool search(int* nums, int numsSize, int target){
     if (numsSize == 0) {
-        return -1;
+        return false;
     }
     int left = 0;
     int right = numsSize - 1;
-    int mid = 0;
     while (left + 1 < right) {
-        if (nums[left] == target) {
-            return left;
-        }
-        if (nums[right] == target) {
-            return right;
-        }
-        mid = left + (right - left) / 2;
-        if (nums[mid] == target) {
-            return mid;
-        }
+        if (nums[left] == target)
+            return true;
+        if (nums[right] == target) 
+            return true;
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target)
+            return true;
         if (nums[left] < nums[mid]) {
             if (target < nums[left] || target > nums[mid])
                 left = mid;
@@ -31,8 +27,8 @@ int search(int* nums, int numsSize, int target){
         }
     }
     if (nums[left] == target) 
-        return left;
+        return true;
     if (nums[right] == target)
-        return right;
-    return -1;
+        return true;
+    return false;
 }

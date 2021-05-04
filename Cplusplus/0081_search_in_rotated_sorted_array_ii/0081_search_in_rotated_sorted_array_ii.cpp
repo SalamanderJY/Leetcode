@@ -18,15 +18,14 @@ public:
                     left = mid;
                 else
                     right = mid;
-            }
-            else if (nums[left] > nums[mid]) {
+            } else if (nums[left] > nums[mid]) {
                 if (target < nums[mid] || target > nums[right])
                     right = mid;
                 else
                     left = mid;
-            }
-            else
+            } else {
                 left++;
+            }
         }
         if (nums[left] == target) 
             return true;
