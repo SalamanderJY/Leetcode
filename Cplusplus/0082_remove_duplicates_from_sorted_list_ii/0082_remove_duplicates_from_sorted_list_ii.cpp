@@ -25,8 +25,7 @@ public:
             if (count == 1) {
                 prev = current;
                 current = current->next;
-            }
-            else {
+            } else {
                 current = current->next;
                 prev->next = current;
             }
