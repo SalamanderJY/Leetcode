@@ -12,14 +12,12 @@ public:
         if (head == NULL)
             return NULL;
         ListNode* current = head;
-        while (current && current->next)
-        {
+        while (current && current->next) {
             if (current->val == current->next->val)
                 current->next = current->next->next;
             else
                 current = current->next;
         }
-        
         return head;
     }
 };
