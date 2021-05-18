@@ -19,8 +19,7 @@ public:
             if (head->val < x) {
                 ts->next = head;
                 ts = ts->next;
-            }
-            else {
+            } else {
                 tl->next = head;
                 tl = tl->next;
             }
