@@ -6,8 +6,8 @@ public class Solution {
         int index1 = m - 1;
         int index2 = n - 1;
         
-        while(index2 >= 0) {
-            if(index1 < 0 || nums2[index2] >= nums1[index1]) {
+        while (index2 >= 0) {
+            if (index1 < 0 || nums2[index2] >= nums1[index1]) {
                 nums1[mergeIndex] = nums2[index2];
                 mergeIndex--;
                 index2--;
